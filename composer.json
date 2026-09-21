@@ -1,0 +1,62 @@
+{
+    "name": "gangway/laravel",
+    "description": "Official Laravel SDK for the Gangway Operator API: catalog, availability, bookings, tickets, check-in, finance and webhooks.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "gangway",
+        "laravel",
+        "bookings",
+        "tours",
+        "rentals",
+        "tickets",
+        "operator-api"
+    ],
+    "homepage": "https://gangway.app",
+    "authors": [
+        {
+            "name": "Gangway",
+            "email": "vincent@gangway.app",
+            "homepage": "https://gangway.app"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gangway\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gangway\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gangway\\Laravel\\GangwayServiceProvider"
+            ],
+            "aliases": {
+                "Gangway": "Gangway\\Laravel\\Facades\\Gangway"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
