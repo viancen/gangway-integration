@@ -4,6 +4,7 @@ namespace Gangway\Laravel;
 
 use Gangway\Laravel\Resources\Availability;
 use Gangway\Laravel\Resources\Bookings;
+use Gangway\Laravel\Resources\Cms;
 use Gangway\Laravel\Resources\Customers;
 use Gangway\Laravel\Resources\Discovery;
 use Gangway\Laravel\Resources\Equipment;
@@ -119,6 +120,11 @@ class GangwayManager
     public function widgets(): Widgets
     {
         return new Widgets($this->client);
+    }
+
+    public function cms(): Cms
+    {
+        return new Cms($this->client);
     }
 
     public function verifier(?string $secret = null): WebhookVerifier
